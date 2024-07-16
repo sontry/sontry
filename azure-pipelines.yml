@@ -1,5 +1,5 @@
 trigger:
-- main  # 기본 브랜치 이름으로 변경
+- main  # 트리거할 브랜치 이름
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -8,8 +8,8 @@ steps:
 - task: Docker@2
   inputs:
     command: 'buildAndPush'
-    containerRegistry: 'sontry.azurecr.io'
-    repository: 'https://github.com/sontry/sontry.git'
+    containerRegistry: 'sontry-azurecr-connection'  # Azure DevOps에서 설정한 서비스 연결 이름
+    repository: 'sontry/model-container'  # ACR 또는 Docker Hub에 저장할 이미지 이름
     dockerfile: '**/Dockerfile'
     tags: |
       $(Build.BuildId)
