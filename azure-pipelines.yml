@@ -2,7 +2,7 @@ trigger:
 - main  # 트리거할 브랜치 이름
 
 pool:
-  vmImage: 'TEST AGENTPOOL'
+  name: 'TEST AGENTPOOL'  # 에이전트 풀 이름
 
 steps:
 - task: Docker@2
