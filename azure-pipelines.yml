@@ -2,7 +2,7 @@ trigger:
 - main  # 트리거할 브랜치 이름
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'TEST AGENTPOOL'
 
 steps:
 - task: Docker@2
